@@ -1,0 +1,236 @@
+/* 基础样式 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
+}
+
+body {
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* 按钮样式 */
+button, .btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: #1890ff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #40a9ff;
+}
+
+.btn-secondary {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #d9d9d9;
+}
+
+.btn-secondary:hover {
+    background-color: #e6e6e6;
+}
+
+.btn-danger {
+    background-color: #ff4d4f;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #ff7875;
+}
+
+/* 头部样式 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* 日程列表样式 */
+.schedule-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.schedule-item {
+    padding: 15px;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s;
+}
+
+.schedule-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-info {
+    flex-grow: 1;
+}
+
+.schedule-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.schedule-meta {
+    color: #666;
+    font-size: 0.9em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.schedule-status {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+
+.status-not-started {
+    background-color: #faad14;
+    color: #fff;
+}
+
+.status-in-progress {
+    background-color: #1890ff;
+    color: white;
+}
+
+.status-completed {
+    background-color: #52c41a;
+    color: white;
+}
+
+.schedule-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* 表单样式 */
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="time"],
+select,
+.form-control {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="time"]:focus,
+select:focus,
+.form-control:focus {
+    border-color: #1890ff;
+    outline: none;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* 日期选择器样式 */
+.datepicker {
+    background-color: white;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .schedule-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .schedule-actions {
+        align-self: flex-end;
+    }
+    
+    .schedule-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .form-actions, .action-buttons {
+        flex-direction: column;
+    }
+    
+    button, .btn {
+        width: 100%;
+    }
+}

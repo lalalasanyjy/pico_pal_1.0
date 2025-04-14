@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑日程</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="formTitle">编辑日程</h1>
+        
+        <form id="scheduleForm">
+            <input type="hidden" id="scheduleId">
+            
+            <div class="form-group">
+                <label for="name">名称:</label>
+                <input type="text" id="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="is_repeated">是否重复:</label>
+                <select id="is_repeated" class="form-control">
+                    <option value="true">是</option>
+                    <option value="false">否</option>
+                </select>
+            </div>
+            
+            <div id="repeatFields">
+                <div class="form-group">
+                    <label for="repeat_type">重复类型:</label>
+                    <select id="repeat_type" class="form-control">
+                        <option value="">请选择</option>
+                        <option value="day">每日</option>
+                        <option value="week">每周</option>
+                        <option value="month">每月</option>
+                    </select>
+                </div>
+                
+                <div class="form-group" id="whichDayGroup">
+                    <label for="which_day">日期/星期:</label>
+                    <select id="which_day" class="form-control">
+                        <!-- 动态填充 -->
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="start_date">开始日期:</label>
+                    <input type="text" id="start_date" class="datepicker" placeholder="选择日期">
+                </div>
+                
+                <div class="form-group">
+                    <label for="end_date">结束日期:</label>
+                    <input type="text" id="end_date" class="datepicker" placeholder="选择日期 (可选)">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="exact_date">具体日期 (非重复任务):</label>
+                <input type="text" id="exact_date" class="datepicker" placeholder="选择日期">
+            </div>
+            
+            <div class="form-group">
+                <label for="exact_time">时间:</label>
+                <input type="time" id="exact_time" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="reminder_count">提醒次数:</label>
+                <input type="number" id="reminder_count" min="0" value="1">
+            </div>
+            
+            <div class="form-group">
+                <label for="reminder_interval">提醒间隔 (分钟):</label>
+                <input type="number" id="reminder_interval" min="0" value="5">
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">保存</button>
+                <button type="button" id="cancelBtn" class="btn-secondary">取消</button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/zh.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

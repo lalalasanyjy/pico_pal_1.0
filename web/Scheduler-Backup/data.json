@@ -1,0 +1,61 @@
+{
+  "schedule_count": 4,
+  "schedules": [
+    {
+      "id": 1,
+      "name": "每周会议",
+      "is_repeated": true,
+      "repeat_type": "week",
+      "which_day": 7,
+      "start_date": "2023-11-01",
+      "end_date": null,
+      "exact_date": null,
+      "reminder_count": 1,
+      "reminder_interval": 5,
+      "exact_time": "16:11",
+      "status": "未开始"
+    },
+    {
+      "id": 2,
+      "name": "项目评审",
+      "is_repeated": false,
+      "repeat_type": null,
+      "which_day": null,
+      "start_date": null,
+      "end_date": null,
+      "exact_date": "2026-12-15",
+      "reminder_count": 2,
+      "reminder_interval": 10,
+      "exact_time": "16:19",
+      "status": "未开始"
+    },
+    {
+      "id": 3,
+      "name": "每日站会",
+      "is_repeated": true,
+      "repeat_type": "day",
+      "which_day": null,
+      "start_date": "2023-11-01",
+      "end_date": null,
+      "exact_date": null,
+      "reminder_count": 1,
+      "reminder_interval": 5,
+      "exact_time": "16:16",
+      "status": "进程中"
+    },
+    {
+      "id": 4,
+      "name": "月度报告",
+      "is_repeated": true,
+      "repeat_type": "month",
+      "which_day": 1,
+      "start_date": "2023-11-01",
+      "end_date": "2024-11-01",
+      "exact_date": null,
+      "reminder_count": 1,
+      "reminder_interval": 5,
+      "exact_time": "16:17",
+      "status": "已结束"
+    }
+  ]
+}
